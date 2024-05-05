@@ -6,7 +6,7 @@
 </h4>
 
 ## Демонстрация
-[demo.webm](https://github.com/Forwall100/kino-cli/assets/78537089/92a7812f-5c39-4a52-bab5-dc413d0cfa79)
+[2024-05-06-01-54-41-_online-video-cutter.com_.webm](https://github.com/Forwall100/kino-cli/assets/78537089/38d2f33a-fc09-4ae6-8455-26c31f0fbaaa)
 
 
 ## Устанока (arch linux)
@@ -31,8 +31,13 @@ source .bashrc
 ```
 
 ## Использование
+Запуск плеера в electron
 ```bash
 kino-cli <название фильма>
+```
+Запуск плеера в браузере
+```bash
+kino-cli <название фильма> --browser
 ```
 
 ## Лицензия
