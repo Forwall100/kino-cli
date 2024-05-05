@@ -1,0 +1,5 @@
+beautifulsoup4==4.12.3
+bs4==0.0.2
+inquirer==3.2.4
+lxml==5.2.1
+requests==2.31.0
