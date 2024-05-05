@@ -30,3 +30,9 @@ source .bashrc
 ```bash
 kino-cli <название фильма>
 ```
+
+## Лицензия
+Программа работает на основе плеера [Kinobox.tv](https://kinobox.tv/), и предоставляется исключительно в ознакомительных целях!
+**_Пиратство - плохо!_**
+
+MIT _([LICENSE](https://github.com/Forwall100/kino-cli/blob/main/LICENSE) файл)_
