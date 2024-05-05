@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from inquirer import prompt, List 
 import os
+import tempfile
 import subprocess
 
 
@@ -25,16 +26,41 @@ def show_iframe(url):
     html_content = f"""
     <!DOCTYPE html>
     <html>
-    <body">
-        <iframe src="{url}" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+    <head>
+        <style>
+            body {{
+                margin: 0;
+                padding: 0;
+                background-color: #333; 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }}
+            .iframe-container {{
+                border-radius: 20px; 
+                overflow: hidden;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            }}
+            iframe {{
+                width: 80vw;
+                height: 80vh; 
+                border: none;
+            }}
+        </style>
+    </head>
+    <body>
+        <div class="iframe-container">
+            <iframe src="{url}" frameborder="0" allowfullscreen></iframe>
+        </div>
     </body>
     </html>
     """
-    html_file = "temp.html"
-    with open(html_file, "w", encoding="utf-8") as f:
-        f.write(html_content)
+    with tempfile.NamedTemporaryFile(mode="w", delete=False, suffix=".html") as temp_file:
+        temp_filename = temp_file.name
+        temp_file.write(html_content)
 
-    subprocess.Popen(['electron', os.path.abspath(html_file)], stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
+    subprocess.Popen(['electron', temp_filename], stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
     print("Enjoy!")
     exit()
 
