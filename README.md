@@ -5,6 +5,10 @@
 Эта программа использует <a href="https://www.kinopoisk.ru/">кинопоиск</a> для поиска фильмов и <a href = "https://kinobox.tv/">kinobox</a> для поиска плеера.
 </h4>
 
+## Демонстрация
+[demo.webm](https://github.com/Forwall100/kino-cli/assets/78537089/92a7812f-5c39-4a52-bab5-dc413d0cfa79)
+
+
 ## Устанока (arch linux)
 1. Склонируйте репозиторий
 2. Создайте и активируйте виртуальное окружение
