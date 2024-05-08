@@ -21,7 +21,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 sudo pacman -S electron
 ```
-4. Добавьте строку в ~/.bashrc
+4. Добавьте алиас в ~/.bashrc
 ```bash
 alias kino-cli='<путь к .venv/bin/python3> <путь к скрипту main.py>'
 ```
